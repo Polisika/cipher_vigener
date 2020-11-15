@@ -44,6 +44,6 @@ while True:
         d_text = d_text_in.Get()[:-1].replace(' ', '_')
         key = values[1]
         if len(d_text) > 0 and len(key) > 0 and len(key) == 5:
-            e_text_out.update(e.decrypt_vigenere(d_text, key))
+            e_text_out.update(e.decrypt_vigenere(d_text, key).replace('_', ' '))
         else:
             e_text_out.update('Введите текст в поле и задайте ключ длиной 5 символов')
